@@ -16,3 +16,9 @@
   color: #888;
   font-size: 0.95rem;
 }
+
+.app__word-count {
+  margin-top: 1.5rem;
+  color: #4ade80;
+  font-size: 0.9rem;
+}
