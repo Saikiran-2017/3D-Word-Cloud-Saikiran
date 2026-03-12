@@ -1,0 +1,14 @@
+assignment/
+*.docx
+*.pdf
+node_modules/
+dist/
+build/
+venv/
+.venv/
+__pycache__/
+.env
+.DS_Store
+.cursor/
+.vscode/
+*.log
