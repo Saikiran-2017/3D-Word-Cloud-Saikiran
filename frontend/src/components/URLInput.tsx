@@ -4,7 +4,7 @@ import "./URLInput.css";
 const SAMPLE_URLS = [
   "https://www.npr.org/2026/03/06/nx-s1-5737460/in-one-week-war-has-swept-across-the-middle-east",
   "https://www.npr.org/2026/03/12/nx-s1-5736253/immigrant-truckers-trump-crackdown",
-  "https://www.bbc.com/news/articles/cly5z414nz4o",
+  "https://www.npr.org/2026/03/11/nx-s1-5719502/amid-u-s-china-chip-rivalry-open-standard-designers-warn-their-vision-is-at-risk",
 ];
 
 interface URLInputProps {
