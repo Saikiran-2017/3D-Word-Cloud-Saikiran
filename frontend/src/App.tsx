@@ -1,5 +1,6 @@
 import { useState } from "react";
 import URLInput from "./components/URLInput";
+import WordCloudScene from "./components/WordCloudScene";
 import type { WordScore } from "./types";
 import "./App.css";
 
@@ -42,9 +43,7 @@ function App() {
       <h1>3D Word Cloud</h1>
       <p>Enter a news article URL to visualize its topics.</p>
       <URLInput onSubmit={handleAnalyze} loading={loading} error={error} />
-      {wordData.length > 0 && (
-        <p className="app__word-count">{wordData.length} keywords extracted</p>
-      )}
+      {wordData.length > 0 && <WordCloudScene words={wordData} />}
     </div>
   );
 }
