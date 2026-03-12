@@ -31,19 +31,42 @@ function App() {
       const data: { words: WordScore[] } = await res.json();
       setWordData(data.words);
     } catch (err) {
-      const msg = err instanceof Error ? err.message : "Something went wrong";
-      setError(msg);
+      if (err instanceof TypeError) {
+        setError("Could not reach the server. Is the backend running?");
+      } else if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Something went wrong");
+      }
     } finally {
       setLoading(false);
     }
   }
 
+  const showCloud = wordData.length > 0;
+
+  function handleReset() {
+    setWordData([]);
+    setError(null);
+  }
+
   return (
     <div className="app">
       <h1>3D Word Cloud</h1>
-      <p>Enter a news article URL to visualize its topics.</p>
-      <URLInput onSubmit={handleAnalyze} loading={loading} error={error} />
-      {wordData.length > 0 && <WordCloudScene words={wordData} />}
+      {!showCloud && (
+        <>
+          <p>Enter a news article URL to visualize its topics.</p>
+          <URLInput onSubmit={handleAnalyze} loading={loading} error={error} />
+        </>
+      )}
+      {showCloud && (
+        <>
+          <button className="app__reset" onClick={handleReset}>
+            &larr; Try another article
+          </button>
+          <WordCloudScene words={wordData} />
+        </>
+      )}
     </div>
   );
 }

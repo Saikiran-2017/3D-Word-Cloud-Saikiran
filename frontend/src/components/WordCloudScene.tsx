@@ -11,6 +11,9 @@ interface WordCloudSceneProps {
 
 /** Fibonacci sphere: distributes N points evenly on a sphere surface. */
 function fibonacciSphere(count: number, radius: number): [number, number, number][] {
+  if (count <= 0) return [];
+  if (count === 1) return [[0, 0, 0]];
+
   const points: [number, number, number][] = [];
   const goldenAngle = Math.PI * (3 - Math.sqrt(5));
 
