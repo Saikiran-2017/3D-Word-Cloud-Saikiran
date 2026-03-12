@@ -29,6 +29,9 @@ function App() {
       }
 
       const data: { words: WordScore[] } = await res.json();
+      if (data.words.length === 0) {
+        throw new Error("Could not extract keywords from this article");
+      }
       setWordData(data.words);
     } catch (err) {
       if (err instanceof TypeError) {
