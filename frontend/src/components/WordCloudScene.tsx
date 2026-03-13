@@ -91,23 +91,28 @@ function WordCloudScene({ words }: WordCloudSceneProps) {
   const positions = fibonacciSphere(words.length, 6);
 
   return (
-    <div className="word-cloud-canvas">
-      <Canvas camera={{ position: [0, 0, 16], fov: 50 }}>
-        <ambientLight intensity={0.8} />
-        <RotatingGroup>
-          {words.map((w, i) => (
-            <WordMesh
-              key={w.word}
-              text={w.word}
-              position={positions[i]!}
-              fontSize={weightToSize(w.weight)}
-              color={weightToColor(w.weight)}
-            />
-          ))}
-        </RotatingGroup>
-        <OrbitControls enablePan={false} minDistance={8} maxDistance={28} />
-      </Canvas>
-    </div>
+    <figure className="word-cloud-figure">
+      <div className="word-cloud-canvas">
+        <Canvas camera={{ position: [0, 0, 16], fov: 50 }}>
+          <ambientLight intensity={0.8} />
+          <RotatingGroup>
+            {words.map((w, i) => (
+              <WordMesh
+                key={w.word}
+                text={w.word}
+                position={positions[i]!}
+                fontSize={weightToSize(w.weight)}
+                color={weightToColor(w.weight)}
+              />
+            ))}
+          </RotatingGroup>
+          <OrbitControls enablePan={false} minDistance={8} maxDistance={28} />
+        </Canvas>
+      </div>
+      <figcaption className="word-cloud-hint">
+        Drag to orbit · Scroll to zoom
+      </figcaption>
+    </figure>
   );
 }
 
