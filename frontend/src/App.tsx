@@ -4,7 +4,7 @@ import WordCloudScene from "./components/WordCloudScene";
 import type { WordScore } from "./types";
 import "./App.css";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://wordcloud-backend.onrender.com";
 
 function App() {
   const [wordData, setWordData] = useState<WordScore[]>([]);
