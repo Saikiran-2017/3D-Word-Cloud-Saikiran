@@ -3,7 +3,45 @@
 A full-stack web application that accepts a news article URL, extracts its key topics using NLP, and renders them as an interactive, animated 3D word cloud. Word size and color reflect relevance — larger and brighter words are more distinctive to the article.
 
 **Live Demo:** https://wordcloud-frontend.onrender.com  
-**Backend API Docs:** https://wordcloud-backend.onrender.com/docs
+**Backend API Docs:** https://wordcloud-backend.onrender.com/docs  
+**Repository:** https://github.com/Saikiran-2017/3D-Word-Cloud-Saikiran
+
+<p align="center">
+  <img src="docs/screenshots/wordcloud-result.png" width="800"/>
+</p>
+
+## Live Demo
+Frontend: https://wordcloud-frontend.onrender.com
+Backend API Docs: https://wordcloud-backend.onrender.com/docs
+---
+
+## Screenshots
+
+### Application Interface
+
+![Homepage](docs/screenshots/homepage.png)
+
+![Generated Word Cloud](docs/screenshots/wordcloud-result.png)
+
+![Loading State](docs/screenshots/loading-state.png)
+
+### API Documentation
+
+![API Docs](docs/screenshots/api-docs.png)
+
+### Deployment
+
+Backend deployed on Render
+
+![Render Backend](docs/screenshots/render-backend.png)
+
+Frontend deployed on Render
+
+![Render Frontend](docs/screenshots/render-frontend.png)
+
+### Repository
+
+![GitHub Repo](docs/screenshots/github-repo.png)
 
 ---
 
