@@ -2,6 +2,9 @@
 
 A full-stack app that takes a news article URL, extracts the key topics, and renders them as an interactive 3D word cloud. Paste a link, hit Analyze, and explore the results in a rotating, zoomable 3D scene where word size reflects relevance.
 
+**Live Demo:** https://wordcloud-frontend.onrender.com  
+**Backend API Docs:** https://wordcloud-backend.onrender.com/docs
+
 ## Tech Stack
 
 **Frontend:** React, TypeScript, Three.js, React Three Fiber, Drei, Vite
