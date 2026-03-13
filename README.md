@@ -7,7 +7,7 @@ A full-stack web application that accepts a news article URL, extracts its key t
 **Repository:** https://github.com/Saikiran-2017/3D-Word-Cloud-Saikiran
 
 <p align="center">
-  <img src="docs/screenshots/wordcloud-result.png" width="800"/>
+  <img src="docs/screenshots/homepage.png" width="800"/>
 </p>
 
 ## Live Demo
