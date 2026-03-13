@@ -39,7 +39,14 @@ function URLInput({ onSubmit, loading, error }: URLInputProps) {
           disabled={loading}
         />
         <button type="submit" disabled={loading || !isValid}>
-          {loading ? "Analyzing…" : "Analyze"}
+          {loading ? (
+            <>
+              <span className="url-input__spinner" aria-hidden="true" />
+              Analyzing…
+            </>
+          ) : (
+            "Analyze"
+          )}
         </button>
       </div>
 
