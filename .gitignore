@@ -13,3 +13,4 @@ __pycache__/
 .cursor/
 .vscode/
 *.log
+*.tsbuildinfo
